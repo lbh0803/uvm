@@ -3,7 +3,9 @@
 import uvm_pkg::*;
 `include "uvm_macros.svh"
 `include "apb_if.sv"
+`include "apb_reg.sv"
 `include "apb_transaction.sv"
+`include "apb_adapter.sv"
 `include "apb_driver.sv"
 `include "apb_sequencer.sv"
 `include "apb_monitor.sv"

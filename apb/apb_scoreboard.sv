@@ -16,7 +16,7 @@ class apb_scoreboard extends uvm_scoreboard;
         agent2sb_imp = new("agent2sb_imp", this);
     endfunction
 
-    virtual function write(apb_tr tr);
+    virtual function void write(apb_tr tr);
         bit addr_idx = tr.addr[31];
         if (tr.apb_cmd == apb_tr::WRITE) begin
             transaction[addr_idx] = tr.wdata;

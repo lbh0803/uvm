@@ -32,6 +32,7 @@ class apb_base_test extends uvm_test;
         apb_base_seq apb_seq;
         apb_seq = apb_base_seq::type_id::create("apb_seq");
         phase.raise_objection(this, "Starting apb_base seq main phase");
+        apb_seq.reg_blk = env.reg_blk;
         apb_seq.start(env.agt.sqr);
         #100ns;
         phase.drop_objection(this, "Finised apb_base seq in main_phase");
